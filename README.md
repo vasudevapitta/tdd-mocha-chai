@@ -23,7 +23,7 @@ npm install --save-dev regenerator-runtime
 
 
 npm install --save-dev chai-exclude
-this is chai package which allows us to exclude certain properties on the actual values returned from mongodb - Mongodb add a unique _id property for each record which is inserted into the database - we want to exclude this when we are comparing the result from the database with the expected result we define in our test file
+this is a chai package which allows us to exclude certain properties on the actual values returned from mongodb - Mongodb add a unique _id property for each record which is inserted into the database - we want to exclude this when we are comparing the result from the database with the expected result we define in our test file
 
 //Install mongodb
 https://medium.com/@LondonAppBrewery/how-to-download-install-mongodb-on-windows-4ee4b3493514
