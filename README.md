@@ -32,3 +32,5 @@ this is a chai package which allows us to exclude certain properties on the actu
 https://medium.com/@LondonAppBrewery/how-to-download-install-mongodb-on-windows-4ee4b3493514
 after following everything from the link - Search for environment variables in windows search and go to path and add a new path `C:\Program Files\MongoDB\Server\4.0\bin`
 Now restart terminal
+
+afterEach hook by mocha allows us to run a block of code mocha after every test

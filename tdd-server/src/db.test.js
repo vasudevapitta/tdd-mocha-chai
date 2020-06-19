@@ -7,6 +7,9 @@ const DB_NAME = process.env.NODE_ENV === 'test'?'TEST_DB':'PROD_DB';
 
 describe('getUserByUsername', ()=>{
     it('get the correct user from the database given a username', async ()=>{
+        afterEach('reset the database', async ()=>{
+            await resetDatabase();
+        });
 
         const collection = 'users';
 
@@ -27,8 +30,6 @@ describe('getUserByUsername', ()=>{
         const actual = await getUserByUsername('abc');
 
         const finalDBState = await getDatabaseData(collection);
-
-        await resetDatabase();
 
         const expected = {
             id: '123',
