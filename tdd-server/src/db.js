@@ -18,6 +18,6 @@ export const getUserByUsername = async (username) => {
 
     client.close();
 
-    return result
+    return result;
 
 }

@@ -1,3 +1,6 @@
+Create .env file with the below code in it and then run your project
+NODE_ENV=test
+
 # tdd-mocha-chai
 a simple tdd project using mocha chai
 
