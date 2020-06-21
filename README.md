@@ -34,3 +34,11 @@ after following everything from the link - Search for environment variables in w
 Now restart terminal
 
 afterEach hook by mocha allows us to run a block of code mocha after every test
+
+//install sinon as a dependency to create test doubles - we can simply create a test double for our database communication layer that behaves in a similar way without actually performing time-consuming database operations, since we want to keep our test suite fast. And the way we do this is by using test doubles
+
+npm install --save-dev sinon
+
+//install supertest to allow you to run our integration tests on a node server without starting up the server. So it runs integration tests fast. Supertest allows us to query our server and get results just as if the server was actually running
+
+npm install supertest --save-dev
