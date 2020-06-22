@@ -25,4 +25,27 @@ describe   ('GET /users/:username', ()=>{
         stub.restore();
         //And calling this stub.restore here makes sure that the method is returned to normal before any other tests run
     });
+
+    it('sends a correct response when there is an error', async ()=>{
+        const fakeError = {message: 'Something went wrong!'};
+
+        const stub = sinon.stub(db, 'getUserByUsername')
+        .throws(fakeError);
+
+        await request(app).get('/users/abc')
+        .expect(500)
+        .expect('Content-Type', /json/)
+        .expect(fakeError);
+
+        stub.restore();
+    });
+
+    it('returns the appropriate response when the user is not found', async ()=>{
+        const stub = sinon.stub(db, 'getUserByUsername').resolves(null);
+
+        await request(app).get('/users/test')
+        .expect(404);
+
+        stub.restore();
+    });
 });
