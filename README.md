@@ -42,3 +42,6 @@ npm install --save-dev sinon
 //install supertest to allow you to run our integration tests on a node server without starting up the server. So it runs integration tests fast. Supertest allows us to query our server and get results just as if the server was actually running
 
 npm install supertest --save-dev
+
+npm install --save-dev nyc
+NYC npm package to check untested code going into PROD. It basically watches your code while you run the tests and keeps track of the tested and untested code and generates a report with the code coverage
