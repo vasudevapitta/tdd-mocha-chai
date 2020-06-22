@@ -64,6 +64,7 @@ describe('getUserByUsername', ()=>{
 
         const finalDBState = await getDatabaseData(collection);
 
+
         expect(actual).to.be.null;
 
         expect(finalDBState).excludingEvery('_id').to.deep.equal(fakeData);
